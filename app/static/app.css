@@ -1,0 +1,153 @@
+/* app css stylesheet */
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    background-color: #444;
+}
+
+.menu {
+  list-style: none;
+  border-bottom: 0.1em solid black;
+  margin-bottom: 2em;
+  padding: 0 0 0.5em;
+}
+
+.menu:before {
+  content: "[";
+}
+
+.menu:after {
+  content: "]";
+}
+
+.menu > li {
+  display: inline;
+}
+
+.menu > li:before {
+  content: "|";
+  padding-right: 0.3em;
+}
+
+.menu > li:nth-child(1):before {
+  content: "";
+  padding: 0;
+}
+
+.static-width-page {
+    width: 1264px;
+    margin: 0 auto 0 auto;
+}
+
+header {
+    font-size: 36px;
+    color: white;
+    margin-top: 20px;
+}
+
+.photoFeed-favorites-container {
+    color: white;
+    float: right;
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: right;
+}
+
+.photoFeed-container {
+    overflow: auto;
+}
+
+.photoFeed-ul {
+    width: 314px;
+    float: left;
+}
+
+@media (max-width: 1264px) {
+    .static-width-page {
+        width: 946px;
+    }
+}
+
+@media (max-width: 960px) {
+    .static-width-page {
+        width: 628px;
+    }
+}
+
+@media (max-width: 625px) {
+    .static-width-page {
+        width: 300px;
+    }
+    .photoFeed-ul {
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        column-count: 1;
+    }
+    header {
+        text-align: center;
+    }
+}
+
+.photoFeed-li {
+    width: 300px;
+    min-height: 200px;
+    border-radius: 3px;
+    background: white;
+    margin-bottom: 20px;
+    border: 1px solid #333;
+    display: inline-block;
+}
+
+.photo-item-star {
+    float: right;
+    cursor: pointer;
+    height: 22px;
+    width: 22px;
+    position: relative;
+    bottom: 2px;
+    background-image: url('star-gray.png');
+    background-size: 22px 22px;
+}
+
+.photo-item-star-favorited {
+    background-image: url('star-yellow.png');
+}
+
+.photo-item-author {
+    text-overflow: ellipsis;
+    float: left;
+    width: 240px;
+}
+
+.photo-item-header {
+    width: 270px;
+    min-height: 20px;
+    height: auto;
+    padding: 15px;
+    font-weight: bold;
+    overflow: visible;
+    font-size: 13px;
+}
+
+.photo-item-img-container {
+    width: 100%;
+}
+
+.photo-item-img-container img {
+    width: 100%;
+}
+
+.photo-item-footer {
+    overflow: hidden;
+    width: 270px;
+    padding: 15px;
+    color: #777;
+    font-size: 13px;
+    font-style: italic;
+}

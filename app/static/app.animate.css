@@ -1,0 +1,23 @@
+.appear-animation.ng-enter,
+.appear-animation.ng-leave,
+.appear-animation.ng-move {
+      transition: 0.1s linear all;
+}
+
+.appear-animation.ng-enter,
+.appear-animation.ng-move {
+    opacity: 0;
+}
+
+.appear-animation.ng-enter.ng-enter-active,
+.appear-animation.ng-move.ng-move-active {
+    opacity: 1;
+}
+
+.appear-animation.ng-leave {
+    opacity: 1;
+}
+
+.appear-animation.ng-leave.ng-leave-active {
+    opacity: 0;
+}

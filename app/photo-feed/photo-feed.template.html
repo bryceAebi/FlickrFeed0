@@ -1,0 +1,28 @@
+<div class="photoFeed-container">
+    <div class="photoFeed-favorites-container">
+        <input name="favorites" type="checkbox" ng-model="$ctrl.onlyFavs">
+        <label for="favorites">Favorites</label>
+    </div>
+    <ul class="photoFeed-ul" ng-repeat="photoColumn in $ctrl.columns">
+        <li class="photoFeed-li appear-animation"
+            ng-repeat="photo in photoColumn | filter:($ctrl.onlyFavs || '') && {favorited:true}">
+            <div class="photo-item-header">
+                <div class="photo-item-author">
+                    {{ photo.author }}
+                </div>
+                <div class="photo-item-star"
+                    ng-click="$ctrl.toggleFavorite(photo)"
+                    ng-class="{'photo-item-star-favorited': photo.favorited===true}">
+                </div>
+            </div>
+            <div class="photo-item-img-container">
+                <a href="{{ photo.link }}" target="_blank">
+                    <img class="photo-item-img" src="{{photo.img}}"></img>
+                </a>
+            </div>
+            <div class="photo-item-footer">
+                {{ photo.title }}
+            </div>
+        </li>
+    </ul>
+</div>
