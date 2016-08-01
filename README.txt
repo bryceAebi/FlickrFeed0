@@ -38,6 +38,8 @@ FUTURE TODO:
 ============
 - setup an asset minifier for the js and css
 - add scss functionality
+- remove call to GoogleFontsAPI. store the fonts in
+  /static (I was just being lazy)
 - deal with case where large amounts of photos are
   loaded (hide/delete old photos and data except for favorites)
 - autobalance waterfall columns (sometimes columns end up having
