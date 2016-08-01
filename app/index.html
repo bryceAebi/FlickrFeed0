@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="flickrFeedApp" class="no-js">
+<html lang="en" class="no-js">
     <head>
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,7 +16,7 @@
         type='text/css'>
       <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
-    <body>
+    <body ng-app="flickrFeedApp">
       <div class="static-width-page">
         <header>Flickr Feed</header>
         <photo-feed></photo-feed>
@@ -24,6 +24,7 @@
       <script src="bower_components/jquery/dist/jquery.min.js"></script>
       <script src="bower_components/angular/angular.js"></script>
       <script src="bower_components/angular-animate/angular-animate.js"></script>
+      <script src="bower_components/angular-mocks/angular-mocks.js"></script>
       <script src="app.module.js"></script>
       <script src="photo-feed/photo-feed.module.js"></script>
       <script src="photo-feed/photo-feed.component.js"></script>
