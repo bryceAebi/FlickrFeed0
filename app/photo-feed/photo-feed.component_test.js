@@ -2,7 +2,7 @@
 
 describe('photoFeed', function() {
 
-    beforeEach(module('virtaApp'));
+    beforeEach(module('flickrFeedApp'));
 
     // Load the module that contains the `photoFeed` component before each test
     beforeEach(module('photoFeed'));

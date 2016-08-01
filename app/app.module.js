@@ -1,17 +1,17 @@
 'use strict';
 
-// Define the `virtaApp` module
-var virtaApp = angular.module('virtaApp', [
+// Define the `flickrFeedApp` module
+var flickrFeedApp = angular.module('flickrFeedApp', [
   'ngAnimate',
   'photoFeed'
 ]);
 
 // Endpoint to hit for photo data
-virtaApp.constant(
+flickrFeedApp.constant(
     'flickrEndpoint',
     'https://api.flickr.com/services/feeds/photos_public.gne?format=json');
 
 // Feed refresh rate in milliseconds
-virtaApp.constant(
+flickrFeedApp.constant(
     'refreshRate',
      12000);
